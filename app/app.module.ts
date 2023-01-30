@@ -5,10 +5,19 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  imports: [BrowserModule, FormsModule, FlexLayoutModule,MaterialModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    FlexLayoutModule,
+    MaterialModule,
+    MatFormFieldModule,
+   
+  ],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
