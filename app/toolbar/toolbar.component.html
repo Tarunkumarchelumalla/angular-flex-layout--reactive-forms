@@ -6,21 +6,32 @@
         mat-raised-button
         color="primary"
         mat-button
-        (click)="drawer.toggle()"
+        (click)="opened = !opened"
       >
         Toggle sidenav
       </button>
     </mat-toolbar>
   </div>
-  <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-
-    <div class="example-sidenav-content"></div>
-  </mat-drawer-container>
+  <div class="hero-container">
+    <mat-drawer-container class="example-container">
+      <mat-drawer class="side-nav" mode="side" [(opened)]="opened">
+        <div class="nav-items">
+          <button
+            class="btn"
+            type="button"
+            routerLink="/Listview"
+            routerLinkActive="active"
+            mat-raised-button
+          >
+            Listview
+          </button>
+          <button class="btn" type="button" mat-raised-button>1</button>
+          <button class="btn" type="button" mat-raised-button>2</button>
+        </div>
+      </mat-drawer>
+    </mat-drawer-container>
+    <div class="listview">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

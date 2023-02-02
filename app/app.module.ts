@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 import {
   MatDrawer,
   MatDrawerContainer,
@@ -21,6 +22,7 @@ import {
   AppRoutinModule,
   routingcomps,
 } from './app-routing/app-routing.module';
+import { CarsdataService } from './appservice.service';
 
 @NgModule({
   imports: [
@@ -34,8 +36,10 @@ import {
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatTableModule
   ],
   declarations: [AppComponent, routingcomps],
   bootstrap: [AppComponent],
+  providers:[CarsdataService]
 })
 export class AppModule {}

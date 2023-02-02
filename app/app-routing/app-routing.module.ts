@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from '../app.component';
 import { DetailviewComponent } from '../detailview/detailview.component';
 import { ListviewComponent } from '../listview/listview.component';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/toolbar', pathMatch: 'full' },
-  { path: 'toolbar', component: ToolbarComponent },
   // {
   //   path: 'depart/:id',
   //   component: Mycomp2Component,
