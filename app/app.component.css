@@ -1,5 +1,7 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 .box {
-  border: 1px;;
+  border: 1px;
   border-color: red;
   border-style: solid;
 }
@@ -7,7 +9,7 @@
 .item {
   width: 100px;
   /* height: 50px; */
-  background-color: #FFDE49;
+  background-color: #ffde49;
   margin: 10px;
   text-align: center;
 }
